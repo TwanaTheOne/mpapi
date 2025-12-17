@@ -231,7 +231,7 @@ let localClientId = null;
 let isMultiplayer = false;
 
 // ----- MULTIPLAYER API -----
-const api = new MultiplayerApi("ws://127.0.0.1:8080");
+const api = new MultiplayerApi("wss://mpapi.se/net");
 
 // ---------- SCOREBOARD ----------
 function renderScoreboard() {
@@ -411,6 +411,7 @@ hostBtn.addEventListener("click", async () => {
     snakesByClientId.clear();
     localClientId = result.clientId;
     localSnake = createSnakeForClient(localClientId, "Host");
+    
 
     startMatch();
   } catch (err) {

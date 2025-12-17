@@ -12,9 +12,9 @@ export class Snake {
     this.score = 0;
     this.alive = true;
   }
-
+ 
   get head() {
-    return this.segments[0];
+    return this.segments[0];   
   }
 
   setDirection(dir) {
