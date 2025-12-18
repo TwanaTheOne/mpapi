@@ -163,7 +163,7 @@ mp.onGame(({ clientId, data }) => {
 import { Game } from "./core/Game.js";
 import { Snake } from "./core/Snake.js";
 import { Scoreboard } from "./core/Scoreboard.js";
-import { MultiplayerApi } from "./multiplayer/MultiplayerApi.js";
+//import { mpapi } from "./multiplayer/MultiplayerApi.js";
 
 console.log("MAIN ÄR LADDAD!");
 
@@ -231,7 +231,7 @@ let localClientId = null;
 let isMultiplayer = false;
 
 // ----- MULTIPLAYER API -----
-const api = new MultiplayerApi("wss://mpapi.se/net");
+const api = new MultiplaApi("wss://mpapi.se/net", "4b57b1f3-4fc2-4c86-ae5c-3a530ae87c7d");
 
 // ---------- SCOREBOARD ----------
 function renderScoreboard() {
